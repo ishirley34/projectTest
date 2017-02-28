@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Projects!</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <!-- Moment.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+
+     <!--CSS 
+    <link rel="stylesheet" type="text/css" href="css/style.css">-->
+
+</head>
+
+<body>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-sm-12'>
+                <h1>Projects</h1>
+            </div>
+            <div class='row'>
+                <!--this in the future could be hidden so that the user upon clicking create an project sees this-->
+                <div class='col-sm-9'>
+                    <h3>Start a Project</h3>
+                    <p class="cool-font">Project Name</p>
+                    <input class="form-control" type="text" id="project_name" placeholder="Enter Project Name">
+                    <br>
+                    <p class="cool-font">Team Name</p>
+                    <input class="form-control" type="text" id="team_name" placeholder="Enter a Team Name">
+                    <br>
+                    <p class="cool-font">Memebers</p>
+                    <input class="form-control" type="text" id="members" placeholder="Enter Project Members">
+                    <br>
+                    <p class="cool-font">Description</p>
+                    <textarea class="form-control" rows="3" id="description" placeholder="Please describe this project"></textarea>
+                    <br>
+                    <p class="cool-font">Start Date</p>
+                    <input class="form-control" type="text" id="s_date" placeholder="MM-DD-YYYY">
+                    <br>
+                    <p class="cool-font">End Date</p>
+                    <input class="form-control" type="text" id="e_date" placeholder="MM-DD-YYYY">
+                    <br>
+                    <p class="cool-font">Roles</p>
+                    <input class="form-control" type="text" id="roles" placeholder="Enter Project Roles">
+                    <br>
+                    <p class="cool-font"></p>
+                    <input class="form-control" type="text" id="author" placeholder="Who is the Author">
+                    <button id="project-submit" class="btn btn-lg pull-right">Submit!</button>
+
+
+                </div>
+                <div class='col-sm-3'></div>
+
+            </div>
+            <div class='row'>
+                <div class='col-sm-9'>
+                    <h4>Upcoming Projects</h4>
+                    <!--this is where the up coming projects would be shown-->
+                    <span id 'projects-to-show'></span>
+                </div>
+                <div class='col-sm-3'>
+                   <div id='calendar'>
+                     <!--this is where the calendar would be shown  -->
+                   </div>
+                   <div id='projects created'>
+                       <!--here is where the user created projects would be shown-->
+                       <span id='projects-post'></span>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/project.js"></script>
+  </body>
+</body>
+</html>
+
