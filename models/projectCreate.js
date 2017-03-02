@@ -23,6 +23,9 @@ var Projects = sequelize.define("project", {
     type: Sequelize.STRING
   },
   members: {
+    type: Sequelize.STRING
+  },
+  description: {
     type: Sequelize.TEXT
   },
   s_date: {
@@ -35,6 +38,21 @@ var Projects = sequelize.define("project", {
     type: Sequelize.STRING
   }
 }, {
+  classMethods: {
+    associate: function (models) {
+      Projects.belongsToMany(User, {
+        through: 'event',
+        foreignKey: 'project_id'
+      });
+      Projects.belongsToMany(models.User, {
+        foreignKey: {
+          name: 'user_id',
+          allowNull: false
+        }
+      });
+
+    }
+  },
   timestamps: false
 });
 console.log(Projects);
